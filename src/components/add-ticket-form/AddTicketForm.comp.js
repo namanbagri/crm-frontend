@@ -1,9 +1,13 @@
 import React from 'react'
 import { Form, Button, Row, Col} from 'react-bootstrap'
 import {PropTypes} from 'prop-types'
+import "./add-ticket-form.style.css";
+
 export const AddTicketForm = ({handleOnChange, handleOnSubmit, formData, formDataError}) => {
   return (
-    <div className='mt-4 p-5 bg-white text-black rounded'>
+    <div className='form-box mt-3 p-5 add-new-ticket bg-light rounded'>
+        <h1 className='text-info text-center' style={{display:'block'}}>Add New Ticket</h1>
+        <hr />
         <Form autoComplete='off' onSubmit={handleOnSubmit}>
                     <Form.Group as={Row}>
                         <Form.Label column sm={3}>Subject</Form.Label>
